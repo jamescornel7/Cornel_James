@@ -1,0 +1,14 @@
+//select highest paid employee
+SELECT * FROM `employees`
+JOIN `salary` ON employees.salary_id = salary.id 
+ORDER BY salary.salary DESC LIMIT 1
+
+// select employees hired in 2017-2018
+SELECT * FROM `employees` 
+WHERE date_hired 
+BETWEEN '2016-12-30' AND '2019-01-01'
+
+// select Employees from IT department hired on 2018 onwards
+SELECT * FROM `employees` JOIN `departments`
+ON employees.department_id = departments.id 
+WHERE date_hired > '2017-12-30' 
